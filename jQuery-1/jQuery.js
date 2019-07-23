@@ -2,12 +2,24 @@
 Q1:
 Check if jQuery is loaded
 */
-
+$(document).ready(function(){
+    if (jQuery) {
+        alert("jQuery is loaded");
+    }
+});
 
 /*
 Q2:
 If You would have very long website - How to help user with fast getting back on top :)
 */
+
+        $(document).ready(function (){
+            $("#button3").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#q1").offset().top
+                }, 4000);
+            });
+        });
 
 
 /*
@@ -15,37 +27,76 @@ Q3:
 If You would like to change sizes of Your div/button with on click :)
 */
 
+$(document).ready(function (){
+    $("#btn1").click(function (){
+        $("#btn1").css({ width: '300px', height: '100px'  });
+    });
+});
+$(document).ready(function (){
+    $("#box").click(function (){
+        $("#box").css({ width: '300px', height: '300px'  });
+    });
+});
+//reset
+
+$(document).ready(function (){
+    $("#btn2").click(function (){
+        $("#box").css({ width: '150px', height: '150px',margin:'15px',background:'#3f3f3f'  });
+        $("#btn1").removeAttr('style');
+    });
+});
 
 /*
 Q4:
 Learn how to fadein your boxes
 */
-
+$(document).ready(function (){
+    $( "#fa" ).click(function() {
+        $( "#div1" ).fadeIn( "slow");
+        $( "#div2" ).fadeIn( "slow");
+        $( "#div3" ).fadeIn( "slow");
+        
+      });
+});
 
 /*
 Q5:
 User must first accept then he or she can signup
 */
 
-
+$(document).ready(function () {
+    $('#myCheckbox').click(function () {
+      $('#myButton').prop("disabled", !$("#myCheckbox").prop("checked")); 
+    })
+  });
 /*
 Q6:
 Let them print
 */
-
-
+$(document).ready(function () {
+    $('.printPage').click(function () {
+window.print();
+})
+});
 /*
 Q7:
 Can username be too long? Yest it can - lets limit that
 */
 
-
+var maxLength = 20;
+$('textarea').keyup(function() {
+  var textlen = maxLength - $(this).val().length;
+  $('#rchars').text(textlen);
+  $('#textarea').prop("maxlength",20);
+});
 /*
 Q8:
 Wanna make some words bolder, do it with jQuery
 */
 
-
+$(document).ready(function () {
+    $('.bold').css("font-weight","Bold");
+});
 /*
 Q9:
 Add new div to your website

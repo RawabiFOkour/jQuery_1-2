@@ -4,10 +4,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Exercises</title>
+	<style type="text/css">
+		textarea {
+			display: block;
+			margin: 1em 0;
+		}
+	</style>
 </head>
 
 <body>
-	<h1>Q1</h1>
+	<h1 id="q1">Q1</h1>
 	<p id="q1">Change this to jQuery status</p>
 
 	<h1>Q2</h1>
@@ -77,15 +83,15 @@
 
 
 	<p>delay() method sets diffrent speed values.</p>
-	<button>Click to fade in boxes with a delay</button>
+	<button id="fa">Click to fade in boxes with a delay</button>
 	<div id="div1" style="width: 100px;height: 90px;display:none;background-color: #9F81F7;"></div><br>
 	<div id="div2" style="width: 100px;height: 90px;display: none;background-color: #0B610B;"></div><br>
 	<div id="div3" style="width: 100px;height: 90px;display: none;background-color: #61210B;"></div><br>
 
 
 	<h1>Q5</h1>
-	<input id="accept" name="accept" type="checkbox" value="y" />I accept<br>
-	<input id="submitbtn" disabled="disabled" name="Submit" type="submit" value="submit" />
+	<input id="myCheckbox" name="accept" type="checkbox" value="y" />I accept<br>
+	<input id="myButton" disabled="disabled" name="Submit" type="submit" value="submit" />
 
 
 	<h1>Q6</h1>
@@ -106,10 +112,10 @@
 	<span id="rchars">15</span> Character(s) Remaining
 
 
-	<h1>Q8</h1>
-	<p>Hello World</p>
-	<p>Rashed: cascading style sheets</p>
-	<p>Madrasa</p>
+	<h1 class="bold">Q8</h1>
+	<p class="bold">Hello World</p>
+	<p class="bold">Rashed: cascading style sheets</p>
+	<p class="bold">Madrasa</p>
 
 
 	<h1>Q9</h1>
@@ -139,7 +145,11 @@
 	<h1>Q13</h1>
 	<input type="button" value="Donald Trump" id="button" />
 
-
+	<input type="button" value="Scroll top" id="button3" />
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
 
 	<script src="jQuery.js"></script>
 </body>
