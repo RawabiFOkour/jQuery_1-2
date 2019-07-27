@@ -67,6 +67,7 @@ User must first accept then he or she can signup
 $(document).ready(function () {
     $('#myCheckbox').click(function () {
       $('#myButton').prop("disabled", !$("#myCheckbox").prop("checked")); 
+    //   $('#myButton').attr("disabled", !this.checked); 
     })
   });
 /*
@@ -101,8 +102,13 @@ $(document).ready(function () {
 Q9:
 Add new div to your website
 */
+var addDiv = $('input[value="Click to add new div"]');
+function new_div() {
+  
+  
+    addDiv.after('<div style="border:1px solid red; height:200px; width:200px; "></div>');
 
-
+}
 /*
 Q10:
 Select values from a JSON object using jQuery
@@ -114,17 +120,28 @@ Q11:
 Add element within ul list
 */
 
-
+$(document).ready(function () {
+    $('#btnclick').click(function () {
+        $('ul').append('<li><a href="#">New Element</a></li>');
+    })
+});
 /*
 Q12:
 Know what user puts into textbox
 */
-
+$(document).ready(function () {
+    $('#usertext').keyup(function () {
+       console.log( $('#usertext').val());
+    })
+});
 
 /*
 Q13:
 Change input value
 */
+$(document).ready(function() {
+    $('#button').val('Rawabi');
+ });
 
 
 
